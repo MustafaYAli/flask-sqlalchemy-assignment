@@ -46,3 +46,4 @@ def search_movies():
     if q != '':
         found_movies = movie_repository_singleton.search_movies(q)
     return render_template('search_movies.html', search_active=True, movies=found_movies, search_query=q)
+
