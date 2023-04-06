@@ -15,15 +15,18 @@ class MovieRepository:
 
     def get_movie_by_id(self, movie_id):
         # TODO get a single movie from the DB using the ID
-        return None
+        Movie = Movie.query.filter_by(id=movie_id).first()
+        return Movie
 
     def create_movie(self, title, director, rating):
         # TODO create a new movie in the DB
-        return None
+        movie = Movie(title=title, director=director, rating=rating)
+        return movie
 
     def search_movies(self, title):
         # TODO get all movies matching case insensitive substring (SQL LIKE, use google for how to do with SQLAlchemy)
-        return None
+        Movies = Movie.query.filter(Movie.title.like(f'%{title}%')).all()
+        return Movies
 
 
 # Singleton to be used in other modules

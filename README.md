@@ -1,5 +1,6 @@
-# ITSC 3155 Module 11 Assignment
+# ITSC 3155 Module 11 Assignment  By Mustafa Ali
 
+## I LOVE THIS CLASSSs
 This movie app is very similar to the one you worked on in a team in Module 9. Here, I have started the application for you and you only need to write code in the `TODO` sections.
 
 ## Python Version
