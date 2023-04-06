@@ -1,8 +1,17 @@
+# TODO - Create SQLAlchemy DB and Movie model
+from flask_sqlalchemy import SQLAlchemy  # type: ignore
+from sqlalchemy import Column, Integer, String  # type: ignore
+from sqlalchemy.orm import relationship  # type: ignore
+from models import Movie
+
+
 class MovieRepository:
 
     def get_all_movies(self):
         # TODO get all movies from the DB
-        return None
+        Movies = Movie.query.all()
+        return Movies
+    
 
     def get_movie_by_id(self, movie_id):
         # TODO get a single movie from the DB using the ID
